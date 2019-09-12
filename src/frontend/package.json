@@ -105,5 +105,8 @@
       "vue-cli-service lint",
       "git add"
     ]
+  },
+  "vue": {
+    "assetsDir": "static"
   }
 }
