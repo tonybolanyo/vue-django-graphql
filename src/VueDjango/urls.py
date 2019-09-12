@@ -18,7 +18,10 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 
+from graphene_django.views import GraphQLView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('sampleapp.urls')),
+    path('graphql', GraphQLView.as_view(graphiql=True)),
 ] + static( '/static/', document_root=settings.STATIC_ROOT, show_indexes=True )

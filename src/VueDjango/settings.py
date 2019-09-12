@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'graphene_django',
 ]
 
 MIDDLEWARE = [
@@ -124,3 +126,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'frontend', 'dist', 'static'),   # Vue generated bundles
 ]
+
+GRAPHENE = {
+    'SCHEMA': 'VueDjango.schema.schema'
+}
